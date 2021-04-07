@@ -7,14 +7,16 @@ import { useHttp } from '../../../hooks/http.hook'
 import { Input } from '../../common/Input'
 import { Button } from '../../common/Button'
 import { Slider } from '../../common/Slider'
+import { Loader } from '../../common/Loader'
 
 import bg from '../../../image/bg-acount-header.jpg'
+
 import ava from '../../../image/ava3.jpg'
 
 import { changeDisabled } from '../../../redux/siteAction'
 import { updateProfileData } from '../../../redux/userAction'
 
-const testBookColection = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+const testBookColection = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 const AccountCardComponent = ({ quoteAccount, authorQuoteAccount,
     inputs, changeDisabled, authData, profileData, updateProfileData }) => {
@@ -87,7 +89,7 @@ const AccountCardComponent = ({ quoteAccount, authorQuoteAccount,
         if (event.type === "keypress" && event.key !== "Enter") {
             return
         }
-        
+
         event.preventDefault()
         setDisable(!isDisable)
 
@@ -176,9 +178,21 @@ const AccountCardComponent = ({ quoteAccount, authorQuoteAccount,
                     <Button onClick={onClick} className={!isActiveTab ? "active-tab" : ""} disabled={!isActiveTab} />
                     <p className="text-for-button">liked</p>
                 </div>
-                <div className="slider">
-                    <Slider bookColection={testBookColection} />
-                </div>
+                {
+                    testBookColection ? <Slider booksColection={testBookColection}
+                        centralMode={testBookColection.length > 7 ? true : false}
+                        widthSlide="61"
+                        heightSlide="78"
+                        marginSlide="4"
+                        widthSlideCenter="85"
+                        heightSlideCenter="109"
+                    // widthSlide="12"
+                    // heightSlide="78"
+                    // marginSlide="0.78"
+                    // widthSlideCenter="17"
+                    // heightSlideCenter="109"
+                    /> : <Loader />
+                }
             </div>
         </div>
     )

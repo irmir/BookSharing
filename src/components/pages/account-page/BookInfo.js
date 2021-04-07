@@ -6,7 +6,7 @@ import testImg from '../../../image/testBook.jpg'
 import lamp from '../../../image/lamp.svg'
 import shelf from '../../../image/shelf.svg'
 
-export const BookInfo = () => {
+export const BookInfo = ({book}) => {
 
     return (
         <div className="account-book-info">
@@ -15,6 +15,7 @@ export const BookInfo = () => {
                     <img src={lamp} alt="lamp" />
                 </div>
                 <div className="image">
+                    {/* {book} */}
                     <a href="/">
                         <img src={testImg} alt="" />
                     </a>

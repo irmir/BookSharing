@@ -16,7 +16,7 @@
         background-position: right 0px bottom 0px;
     }
     .account-card {
-        width: 65%;
+        width: 69%;
         height: 500px;// временно
         background: linear-gradient(215.31deg, rgba(255, 255, 255, 0.1) -11.97%, rgba(92, 68, 46, 0.1) 104.49%);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -140,6 +140,7 @@
             .my-books {
                 border-top: 1px solid rgba(208,194,170,0.3);
                 position: relative;
+                height: 198px;
                     .tabs {
                         position: absolute;
                         top: -30px;
@@ -188,12 +189,12 @@ border-image-source: linear-gradient(104.64deg, #D0C2AA 39.64%, rgba(208, 194, 1
             }
     }
     .account-book-info {
-        width: 35%;
+        width: 31%;
         // background-color: gray;
         display: flex;
             .book-image {
-                width: 57%;
-                margin-left: 7%;
+                width: 54%;
+                margin-left: 3%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -245,6 +246,7 @@ border-image-source: linear-gradient(104.64deg, #D0C2AA 39.64%, rgba(208, 194, 1
                         width: 100%;
                         overflow: hidden;
                         margin-top: -47px;
+                        margin-left: -20px;
                             img {
                                 margin-right: 4px;
                             }
